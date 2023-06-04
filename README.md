@@ -1,3 +1,5 @@
+A marketplace for diabetics to sell supplies to each other at a discount.
+
 <p align="center">
   <a href="https://www.medusajs.com">
   <picture>
@@ -37,8 +39,6 @@
 This starter is compatible with versions >= 1.8.0 of `@medusajs/medusa`. 
 
 ## Getting Started
-
-Visit the [Quickstart Guide](https://docs.medusajs.com/create-medusa-app) to set up a server.
 
 Visit the [Docs](https://docs.medusajs.com/development/backend/prepare-environment) to learn more about our system requirements.
 
