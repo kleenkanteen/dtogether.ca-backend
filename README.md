@@ -1,5 +1,3 @@
-A marketplace for diabetics to sell supplies to each other at a discount.
-
 <p align="center">
   <a href="https://www.medusajs.com">
   <picture>
@@ -14,6 +12,7 @@ A marketplace for diabetics to sell supplies to each other at a discount.
 </h1>
 
 <h4 align="center">
+  <p>A marketplace for diabetics to sell their supplies to each other for free or at a discount.</p>
   <a href="https://docs.medusajs.com">Documentation</a> |
   <a href="https://www.medusajs.com">Website</a>
 </h4>
