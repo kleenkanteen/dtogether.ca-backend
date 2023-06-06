@@ -43,15 +43,22 @@ const plugins = [
       autoRebuild: true,
     },
   },
+  {
+    resolve: `@medusajs/file-local`,
+    options: {
+      // optional
+    },
+  },
 ];
 
 const modules = {
-  /*eventBus: {
+  eventBus: {
     resolve: "@medusajs/event-bus-redis",
     options: {
       redisUrl: REDIS_URL
     }
   },
+  /*
   cacheService: {
     resolve: "@medusajs/cache-redis",
     options: {
