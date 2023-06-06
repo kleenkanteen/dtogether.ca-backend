@@ -2,7 +2,7 @@
 .env
 .DS_Store
 uploads/images/*
-!uploads/images
+!uploads/images/.gitkeep
 /node_modules
 yarn-error.log
 
