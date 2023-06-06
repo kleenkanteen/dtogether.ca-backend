@@ -8,10 +8,11 @@
   </a>
 </p>
 <h1 align="center">
-  Medusa
+  dtogether.ca
 </h1>
 
 <h4 align="center">
+  <p>A marketplace for diabetics to sell their supplies to each other for free or at a discount.</p>
   <a href="https://docs.medusajs.com">Documentation</a> |
   <a href="https://www.medusajs.com">Website</a>
 </h4>
@@ -37,8 +38,6 @@
 This starter is compatible with versions >= 1.8.0 of `@medusajs/medusa`. 
 
 ## Getting Started
-
-Visit the [Quickstart Guide](https://docs.medusajs.com/create-medusa-app) to set up a server.
 
 Visit the [Docs](https://docs.medusajs.com/development/backend/prepare-environment) to learn more about our system requirements.
 
