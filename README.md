@@ -35,7 +35,7 @@
 
 ## Compatibility
 
-This starter is compatible with versions >= 1.8.0 of `@medusajs/medusa`. 
+This epic starter is compatible with versions >= 1.8.0 of `@medusajs/medusa`. 
 
 ## Getting Started
 
