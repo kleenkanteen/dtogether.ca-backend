@@ -46,7 +46,7 @@ const plugins = [
   {
     resolve: `@medusajs/file-local`,
     options: {
-      // optional
+      backend_url: "https://dtogetherca-backend-production.up.railway.app"
     },
   },
 ];
