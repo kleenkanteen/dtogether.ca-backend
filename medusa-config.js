@@ -30,7 +30,7 @@ const STORE_CORS = process.env.STORE_CORS || "http://localhost:8000";
 
 const DATABASE_TYPE = process.env.DATABASE_TYPE || "sqlite";
 const DATABASE_URL = process.env.DATABASE_URL || "postgres://localhost/medusa-store";
-const REDIS_URL = process.env.REDIS_URL || "redis://localhost:6379";
+// const REDIS_URL = process.env.REDIS_URL || "redis://localhost:6379";
 
 const plugins = [
   `medusa-fulfillment-manual`,
@@ -44,20 +44,24 @@ const plugins = [
     },
   },
   {
-    resolve: `@medusajs/file-local`,
+    resolve: `medusa-file-s3`,
     options: {
-      backend_url: "https://dtogetherca-backend-production.up.railway.app"
+        s3_url: process.env.S3_URL,
+        bucket: process.env.S3_BUCKET,
+        region: process.env.S3_REGION,
+        access_key_id: process.env.S3_ACCESS_KEY_ID,
+        secret_access_key: process.env.S3_SECRET_ACCESS_KEY,
     },
   },
 ];
 
 const modules = {
-  eventBus: {
-    resolve: "@medusajs/event-bus-redis",
-    options: {
-      redisUrl: REDIS_URL
-    }
-  },
+  // eventBus: {
+  //   resolve: "@medusajs/event-bus-redis",
+  //   options: {
+  //     redisUrl: REDIS_URL
+  //   }
+  // },
   /*
   cacheService: {
     resolve: "@medusajs/cache-redis",
@@ -77,7 +81,7 @@ const projectConfig = {
   store_cors: STORE_CORS,
   admin_cors: ADMIN_CORS,
   // Uncomment the following lines to enable REDIS
-  redis_url: REDIS_URL
+  // redis_url: REDIS_URL
 }
 
 if (DATABASE_URL && DATABASE_TYPE === "postgres") {
