@@ -1,69 +1,10 @@
-<p align="center">
-  <a href="https://www.medusajs.com">
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://user-images.githubusercontent.com/59018053/229103275-b5e482bb-4601-46e6-8142-244f531cebdb.svg">
-    <source media="(prefers-color-scheme: light)" srcset="https://user-images.githubusercontent.com/59018053/229103726-e5b529a3-9b3f-4970-8a1f-c6af37f087bf.svg">
-    <img alt="Medusa logo" src="https://user-images.githubusercontent.com/59018053/229103726-e5b529a3-9b3f-4970-8a1f-c6af37f087bf.svg">
-    </picture>
-  </a>
-</p>
-<h1 align="center">
-  dtogether.ca
-</h1>
+# Project Overview
 
-<h4 align="center">
-  <p>A marketplace for diabetics to sell their supplies to each other for free or at a discount.</p>
-  <a href="https://docs.medusajs.com">Documentation</a> |
-  <a href="https://www.medusajs.com">Website</a>
-</h4>
+Currently, there are is a facebook groups called "Looping in a time of covid" where diabetics sell supplies to each other for a lot cheaper than if they bought them new. These people there are usually type 1 diabetic, which is when the immune system turns on and attacks your insulin cells. I've seen $500 worth of glucose sensors go for $200. Has 1800 members. Very active as people constantly need supplies such as glucose sensors (small, sits on the belly, $100 a pop, lasts for 10 days each). Or insulin pump sites (a small plastic neede held on by a cotton adhesive, changed every 3 days). People have extra of these due to switching sensor brands, insulin pump brands, or insurances. Some also have extra from reusing sensors for a couple more days, which is not recommended but works totally fine in my experience. I thought that there should be a dedicated marketplace to sell them. Listing them on a facebook group is no very intuitive. Maybe shipping and payment could be built in too like amazon.
 
-<p align="center">
-  Building blocks for digital commerce
-</p>
-<p align="center">
-  <a href="https://github.com/medusajs/medusa/blob/master/CONTRIBUTING.md">
-    <img src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat" alt="PRs welcome!" />
-  </a>
-    <a href="https://www.producthunt.com/posts/medusa"><img src="https://img.shields.io/badge/Product%20Hunt-%231%20Product%20of%20the%20Day-%23DA552E" alt="Product Hunt"></a>
-  <a href="https://discord.gg/xpCwq3Kfn8">
-    <img src="https://img.shields.io/badge/chat-on%20discord-7289DA.svg" alt="Discord Chat" />
-  </a>
-  <a href="https://twitter.com/intent/follow?screen_name=medusajs">
-    <img src="https://img.shields.io/twitter/follow/medusajs.svg?label=Follow%20@medusajs" alt="Follow @medusajs" />
-  </a>
-</p>
+# Tech stack and story of building it
+Most of the frontend and all of the backend was done by a open source framework called Medusa. Next.js on the frontend, express + postgres + redis on the backend. I did not touch the backend thoughn except the config files. Medusa comes with a bunch of pre-built functionality. It's made by a small startup in Denmark, friendly peeps. 
 
-## Compatibility
+I had to follow the docs to configure the backend and host it on Railway. Initially I used local file storage for images, but after having thumbnails disappear after a few days, I set up a s3 bucket to store them and configured the backend s3 plugin to point to my bucket. The docs actually had an error about how the s3 url should be written, it was missing the region part in the url. With a helpful and experienced community member's help in the discord, I was able to fix it after 2 hours and notified the Medusa technical writer who fixed it in no time. And being able to talk to the Medusa team on discord was pretty neat
 
-This epic starter is compatible with versions >= 1.8.0 of `@medusajs/medusa`. 
-
-## Getting Started
-
-Visit the [Docs](https://docs.medusajs.com/development/backend/prepare-environment) to learn more about our system requirements.
-
-## What is Medusa
-
-Medusa is a set of commerce modules and tools that allow you to build rich, reliable, and performant commerce applications without reinventing core commerce logic. The modules can be customized and used to build advanced ecommerce stores, marketplaces, or any product that needs foundational commerce primitives. All modules are open-source and freely available on npm.
-
-Learn more about [Medusa’s architecture](https://docs.medusajs.com/development/fundamentals/architecture-overview) and [commerce modules](https://docs.medusajs.com/modules/overview) in the Docs.
-
-## Roadmap, Upgrades & Plugins
-
-You can view the planned, started and completed features in the [Roadmap discussion](https://github.com/medusajs/medusa/discussions/categories/roadmap).
-
-Follow the [Upgrade Guides](https://docs.medusajs.com/upgrade-guides/) to keep your Medusa project up-to-date.
-
-Check out all [available Medusa plugins](https://medusajs.com/plugins/).
-
-## Community & Contributions
-
-The community and core team are available in [GitHub Discussions](https://github.com/medusajs/medusa/discussions), where you can ask for support, discuss roadmap, and share ideas.
-
-Join our [Discord server](https://discord.com/invite/medusajs) to meet other community members.
-
-## Other channels
-
-- [GitHub Issues](https://github.com/medusajs/medusa/issues)
-- [Twitter](https://twitter.com/medusajs)
-- [LinkedIn](https://www.linkedin.com/company/medusajs)
-- [Medusa Blog](https://medusajs.com/blog/)
+I modifed the frontend from the starter to make it look like it's for diabetes and added a few dummy products. The website is nonfunctional and I decided not to move further with it because the amount of time I'd have to sink to learn Medusa. The API is intimidating. And then I'd have to convince people from switching from facebook to my website. And set up moderation. And most type 1 diabetic's have insurance that covers their supplies as far as I know so it's a niche problem. The time isn't worth the impact. It was a nice intro to Medusa though and how people can help each other in a community. The open source spirit was there.
